@@ -1,0 +1,4 @@
+node_modules
+build/www/scripts
+build/www/**/*.min.css
+config.js

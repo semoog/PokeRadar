@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="pokeradar">
+    <head>
+        <meta charset="utf-8">
+        <title>PokeRadar</title>
+        <link rel="stylesheet" href="./reset.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="./www/styles/master.min.css" media="screen" charset="utf-8">
+    </head>
+    <body ng-controller="masterCtrl">
+
+        <button type="button" ng-click="getPokemon()">Get Pokemans</button>
+
+        <div ng-repeat="pokemon in pokemons">
+          <li>{{pokemon.name}}</li>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+        <script src="./www/scripts/app.js" charset="utf-8"></script>
+        <script src="./www/scripts/masterSvc.js" charset="utf-8"></script>
+        <script src="./www/scripts/masterCtrl.js" charset="utf-8"></script>
+    </body>
+</html>

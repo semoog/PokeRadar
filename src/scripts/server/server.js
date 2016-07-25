@@ -8,7 +8,7 @@ import pokeSvc from './pokeSvc';
 
 //App Init
 const app = express();
-const port = 3000;
+const port = 9001;
 
 //Middleware
 app.use(bodyParser.json());

@@ -8,13 +8,32 @@
     </head>
     <body ng-controller="masterCtrl">
 
-        <button type="button" ng-click="getPokemon()">Get Pokemans</button>
+        <button type="button" id="btn" ng-click="getPokemon()">Gotta Catch 'em All</button>
 
-        <div ng-repeat="pokemon in pokemons">
-          <li>{{pokemon.name}}</li>
+        <div class="pokemonList">
+          <div id="pokebox" ng-repeat="pokemon in pokemons">
+            <img id="pokeImage" ng-src="{{pokemon.image}}"/>
+          </div>
         </div>
 
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+          <ui-gmap-marker
+          ng-repeat="pokemon in pokemons"
+          idKey='pokemon.id'
+          coords='{latitude: pokemon.latitude, longitude: pokemon.longitude}'
+          options="{
+            icon: pokemon.image,
+            title: pokemon.name,
+            animation: BOUNCE
+          }">
+          </ui-gmap-marker>
+        </ui-gmap-google-map>
+
+        <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+        <script src='//maps.googleapis.com/maps/api/js'></script>
+        <script src="./www/scripts/assets/angular-simple-logger.min.js"></script>
+        <script src="./www/scripts/assets/angular-google-maps.min.js"></script>
         <script src="./www/scripts/app.js" charset="utf-8"></script>
         <script src="./www/scripts/masterSvc.js" charset="utf-8"></script>
         <script src="./www/scripts/masterCtrl.js" charset="utf-8"></script>

@@ -1,1 +1,1 @@
-angular.module('pokeradar', []);
+angular.module('pokeradar', ['uiGmapgoogle-maps']);

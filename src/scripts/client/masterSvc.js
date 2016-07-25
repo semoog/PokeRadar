@@ -8,7 +8,7 @@ angular.module('pokeradar')
 			const success = (position) => {
 				deferred.resolve(position);
 			}
-			console.log("Hit getPokemon function on service.");
+			console.log("Getting geolocation...");
 			if ("geolocation" in navigator) {
 				navigator.geolocation.getCurrentPosition((position) => {
 					console.log(position);

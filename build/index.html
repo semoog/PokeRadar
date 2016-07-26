@@ -10,11 +10,11 @@
 
         <button type="button" id="btn" ng-click="getPokemon()">Gotta Catch 'em All</button>
 
-        <div class="pokemonList">
+        <!-- <div class="pokemonList">
           <div id="pokebox" ng-repeat="pokemon in pokemons">
             <img id="pokeImage" ng-src="{{pokemon.image}}"/>
           </div>
-        </div>
+        </div> -->
 
         <ui-gmap-google-map center='map.center' zoom='map.zoom'>
           <ui-gmap-marker
@@ -27,6 +27,16 @@
             animation: BOUNCE
           }">
           </ui-gmap-marker>
+          <ui-gmap-circle center='map.center'
+                radius='40'
+                fill='{
+                  color: "#e03c31",
+                  opacity: 0.1
+                }'
+                stroke= '{
+                  weight: 0.6
+                }'>
+          </ui-gmap-circle>
         </ui-gmap-google-map>
 
         <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>

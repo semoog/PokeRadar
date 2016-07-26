@@ -25,8 +25,8 @@ angular.module('pokeradar')
 		};
 
 		this.getPokemon = (position) => {
-			let lat = position.coords.latitude;
-			let lon = position.coords.longitude;
+			let lat = position.latitude;
+			let lon = position.longitude;
 			return $http({
 			  method: 'GET',
 			  url: 'http://127.0.0.1:9001/pokemon/@' + lat + ',' + lon

@@ -22,7 +22,7 @@ angular.module('pokeradar')
       masterSvc.getGeo()
       .then(response => {
         $scope.coords = response.coords;
-        $scope.map = { center: { latitude: $scope.coords.latitude, longitude: $scope.coords.longitude }, zoom: 16 };
+        $scope.map = { center: { latitude: $scope.coords.latitude, longitude: $scope.coords.longitude }, zoom: 15 };
         $scope.getPokemon();
       });
     }
